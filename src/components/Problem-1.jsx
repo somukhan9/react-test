@@ -169,22 +169,24 @@ const Problem1 = () => {
             </thead>
             <tbody>
               {displayData.length === 0 && (
-                <h3
+                <tr
                   style={{
                     marginTop: '10px',
                     textAlign: 'center',
                   }}
                 >
-                  No Data to Display
-                </h3>
+                  <td>No Data to Display</td>
+                </tr>
               )}
               {loading ? (
-                <h3>Loading...</h3>
+                <tr>
+                  <th>Loading...</th>
+                </tr>
               ) : (
                 displayData?.map((item, index) => (
                   <tr key={index}>
-                    <th>{item.name}</th>
-                    <th>{item.status}</th>
+                    <td>{item.name}</td>
+                    <td>{item.status}</td>
                   </tr>
                 ))
               )}
